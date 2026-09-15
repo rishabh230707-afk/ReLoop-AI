@@ -1,0 +1,82 @@
+{
+  "query": "display for computer lab",
+  "results": {
+    "status": "matched",
+    "message": "Candidate matches; similarity is not a probability or a suitability guarantee.",
+    "matches": [
+      {
+        "id": "RL01",
+        "title": "22 inch LED monitors",
+        "description": "Computer lab monitor HDMI display 1080p tested functional",
+        "category": "Electronics",
+        "department": "Computing Block A",
+        "condition": "working",
+        "quantity": 8,
+        "distance_km": 0.4,
+        "mass_kg": 3.2,
+        "school_shareable": true,
+        "recipient_distances": {
+          "CAMPUS01": 0.4,
+          "SCHOOL01": 3.4
+        },
+        "offered_quantity": 2,
+        "remaining_need": 0,
+        "similarity": 0.6118,
+        "matched_terms": [
+          "computer",
+          "lab",
+          "monitor"
+        ],
+        "explanation": "Shared terms: computer, lab, monitor. Verify all specifications with the owner before transfer."
+      },
+      {
+        "id": "RL02",
+        "title": "24 inch monitors",
+        "description": "Office monitor HDMI display 1080p tested functional",
+        "category": "Electronics",
+        "department": "Admin Block",
+        "condition": "working",
+        "quantity": 3,
+        "distance_km": 0.8,
+        "mass_kg": 3.8,
+        "school_shareable": true,
+        "recipient_distances": {
+          "CAMPUS01": 0.8,
+          "SCHOOL01": 3.8
+        },
+        "offered_quantity": 2,
+        "remaining_need": 0,
+        "similarity": 0.3461,
+        "matched_terms": [
+          "monitor"
+        ],
+        "explanation": "Shared terms: monitor. Verify all specifications with the owner before transfer."
+      }
+    ]
+  },
+  "example_transfer": {
+    "id": "T001",
+    "item_id": "RL01",
+    "title": "22 inch LED monitors",
+    "quantity": 2,
+    "recipient_id": "CAMPUS01",
+    "recipient_name": "Demo Campus",
+    "recipient_type": "campus",
+    "purchase_price_per_unit": 6000,
+    "transport_total": 300,
+    "refurbishment_per_unit": 250,
+    "estimated_net_savings": 11200,
+    "estimated_mass_reused_kg": 6.4,
+    "note": "Demo transfer. Savings depend on a replacement purchase actually being avoided. Mass is reused mass, not proven landfill diversion or CO2 savings."
+  },
+  "impact": {
+    "confirmed_demo_transfers": 1,
+    "school_units_supplied": 0,
+    "recipient_partners_served": 1,
+    "units_reused": 2,
+    "estimated_net_savings_inr": 11200,
+    "estimated_mass_reused_kg": 6.4,
+    "disclosure": "Synthetic inventory and demo transactions. No measured campus impact."
+  },
+  "note": "demo command does not modify local state"
+}

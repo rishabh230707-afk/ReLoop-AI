@@ -1,0 +1,210 @@
+[
+  {
+    "id": "RL01",
+    "title": "22 inch LED monitors",
+    "description": "Computer lab monitor HDMI display 1080p tested functional",
+    "category": "Electronics",
+    "department": "Computing Block A",
+    "condition": "working",
+    "quantity": 8,
+    "distance_km": 0.4,
+    "mass_kg": 3.2,
+    "school_shareable": true,
+    "recipient_distances": {
+      "CAMPUS01": 0.4,
+      "SCHOOL01": 3.4
+    }
+  },
+  {
+    "id": "RL02",
+    "title": "24 inch monitors",
+    "description": "Office monitor HDMI display 1080p tested functional",
+    "category": "Electronics",
+    "department": "Admin Block",
+    "condition": "working",
+    "quantity": 3,
+    "distance_km": 0.8,
+    "mass_kg": 3.8,
+    "school_shareable": true,
+    "recipient_distances": {
+      "CAMPUS01": 0.8,
+      "SCHOOL01": 3.8
+    }
+  },
+  {
+    "id": "RL03",
+    "title": "Adjustable chairs",
+    "description": "Office chair seating adjustable height fabric cushion",
+    "category": "Furniture",
+    "department": "Library Annex",
+    "condition": "working",
+    "quantity": 12,
+    "distance_km": 0.6,
+    "mass_kg": 7.0,
+    "school_shareable": true,
+    "recipient_distances": {
+      "CAMPUS01": 0.6,
+      "SCHOOL01": 3.6
+    }
+  },
+  {
+    "id": "RL04",
+    "title": "Wooden desks",
+    "description": "Study desk table 120 cm wide writing surface",
+    "category": "Furniture",
+    "department": "Hostel Store",
+    "condition": "working",
+    "quantity": 6,
+    "distance_km": 1.2,
+    "mass_kg": 18.0,
+    "school_shareable": true,
+    "recipient_distances": {
+      "CAMPUS01": 1.2,
+      "SCHOOL01": 4.2
+    }
+  },
+  {
+    "id": "RL05",
+    "title": "Metal shelves",
+    "description": "Metal shelf shelving storage books rack",
+    "category": "Furniture",
+    "department": "Central Store",
+    "condition": "working",
+    "quantity": 4,
+    "distance_km": 0.9,
+    "mass_kg": 12.0,
+    "school_shareable": true,
+    "recipient_distances": {
+      "CAMPUS01": 0.9,
+      "SCHOOL01": 3.9
+    }
+  },
+  {
+    "id": "RL06",
+    "title": "Magnetic whiteboards",
+    "description": "Teaching whiteboard marker board 120 cm meeting room",
+    "category": "Teaching",
+    "department": "Teaching Block",
+    "condition": "working",
+    "quantity": 3,
+    "distance_km": 0.5,
+    "mass_kg": 6.0,
+    "school_shareable": true,
+    "recipient_distances": {
+      "CAMPUS01": 0.5,
+      "SCHOOL01": 3.5
+    }
+  },
+  {
+    "id": "RL07",
+    "title": "HDMI projector",
+    "description": "Classroom projector HDMI projection 1080p tested lamp",
+    "category": "Electronics",
+    "department": "Seminar Hall",
+    "condition": "working",
+    "quantity": 1,
+    "distance_km": 0.3,
+    "mass_kg": 2.8,
+    "school_shareable": true,
+    "recipient_distances": {
+      "CAMPUS01": 0.3,
+      "SCHOOL01": 3.3
+    }
+  },
+  {
+    "id": "RL08",
+    "title": "Unused notebooks",
+    "description": "Notebook register stationery blank ruled paper A4",
+    "category": "Stationery",
+    "department": "Student Council",
+    "condition": "working",
+    "quantity": 40,
+    "distance_km": 0.2,
+    "mass_kg": 0.25,
+    "school_shareable": true,
+    "recipient_distances": {
+      "CAMPUS01": 0.2,
+      "SCHOOL01": 3.2
+    }
+  },
+  {
+    "id": "RL09",
+    "title": "Steel retort stands",
+    "description": "Lab stand retort support base clean non hazardous equipment",
+    "category": "Lab equipment",
+    "department": "Physics Lab",
+    "condition": "working",
+    "quantity": 10,
+    "distance_km": 0.4,
+    "mass_kg": 1.4,
+    "school_shareable": false,
+    "recipient_distances": {
+      "CAMPUS01": 0.4,
+      "SCHOOL01": 3.4
+    }
+  },
+  {
+    "id": "RL10",
+    "title": "Laboratory clamps",
+    "description": "Lab clamp support clean non hazardous equipment",
+    "category": "Lab equipment",
+    "department": "Physics Store",
+    "condition": "working",
+    "quantity": 14,
+    "distance_km": 0.7,
+    "mass_kg": 0.3,
+    "school_shareable": false,
+    "recipient_distances": {
+      "CAMPUS01": 0.7,
+      "SCHOOL01": 3.7
+    }
+  },
+  {
+    "id": "RL11",
+    "title": "Office chairs for repair",
+    "description": "Office chair seating fabric cushion loose caster repair required",
+    "category": "Furniture",
+    "department": "Maintenance Store",
+    "condition": "repairable",
+    "quantity": 5,
+    "distance_km": 0.8,
+    "mass_kg": 7.0,
+    "school_shareable": false,
+    "recipient_distances": {
+      "CAMPUS01": 0.8,
+      "SCHOOL01": 3.8
+    }
+  },
+  {
+    "id": "RL12",
+    "title": "24 inch computer lab monitors",
+    "description": "Computer lab monitor HDMI display 1080p tested functional",
+    "category": "Electronics",
+    "department": "Partner Campus (fictional)",
+    "condition": "working",
+    "quantity": 15,
+    "distance_km": 18.0,
+    "mass_kg": 3.8,
+    "school_shareable": true,
+    "recipient_distances": {
+      "CAMPUS01": 18.0,
+      "SCHOOL01": 21.0
+    }
+  },
+  {
+    "id": "RL13",
+    "title": "Study desks",
+    "description": "Study desk table 120 cm wide writing surface",
+    "category": "Furniture",
+    "department": "Partner Campus (fictional)",
+    "condition": "working",
+    "quantity": 20,
+    "distance_km": 22.0,
+    "mass_kg": 18.0,
+    "school_shareable": true,
+    "recipient_distances": {
+      "CAMPUS01": 22.0,
+      "SCHOOL01": 25.0
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "CAMPUS01",
+    "name": "Demo Campus",
+    "type": "campus",
+    "approved": true
+  },
+  {
+    "id": "SCHOOL01",
+    "name": "Demo Community School",
+    "type": "school",
+    "approved": true
+  },
+  {
+    "id": "SCHOOL02",
+    "name": "Demo School awaiting review",
+    "type": "school",
+    "approved": false
+  }
+]
