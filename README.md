@@ -48,6 +48,15 @@ python3 reloop.py gui
 
 Python must include Tk support and run on a graphical desktop. The core and CLI were tested; the desktop interface has not been visually validated in the build environment. On Windows, use `py` if `python3` is unavailable.
 
+## Desktop workspace
+
+- **Find resources:** recipient dropdown, search filters and ranked resource cards.
+- **Review transfer:** opens from a selected result and keeps its recipient fixed.
+- **Reuse impact:** readable metric cards, transfer confirmations and recent history.
+- **Partner network:** fictional institutions and their approval status.
+
+Download the latest repository ZIP to get this redesigned interface. Close the old application before opening the new copy. The matching engine and CLI remain compatible with the existing commands.
+
 ## Search for a school
 
 ```bash
