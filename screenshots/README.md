@@ -1,29 +1,37 @@
 # Application screenshots
 
-Add screenshots from your actual demo run to this folder. No desktop screenshots have been added yet.
+Use the redesigned desktop interface to capture real demo runs. No screenshots have been added yet.
 
-## Recommended captures
+## Open the updated app
 
-1. **matching.png** — Run `python3 reloop.py gui`. Search for `display for computer lab`, quantity `2`, distance `10`, partner `SCHOOL01`. Capture the query and ranked results.
-2. **transfer.png** — Record an inspected demo transfer for `RL01` with recipient `SCHOOL01`. Capture the result with quantity and entered costs visible.
-3. **impact.png** — Open **View demo impact** and capture the recorded totals, including school units supplied.
+Download a fresh ZIP from GitHub and extract it. Open Terminal in the new project folder, then run:
 
-If the desktop interface is unavailable, use the equivalent CLI commands from the root README and capture the terminal. Label these as terminal screenshots.
-
-On macOS, press **Shift + Command + 4** to capture a selected area. Save images using the filenames above. Keep the synthetic/demo disclosure visible and crop out unrelated personal information.
-
-## Upload to GitHub
-
-Open this folder on GitHub and use **Add file → Upload files**. Drag in your PNG files and commit them.
-
-## Display images in the project README
-
-After the files have been uploaded, add the relevant lines to the root README:
-
-```markdown
-![Matching results](screenshots/matching.png)
-![Recorded demo transfer](screenshots/transfer.png)
-![Demo impact summary](screenshots/impact.png)
+```bash
+python3 reloop.py gui
 ```
 
-Only add a line once its image exists. The existing images in `docs/images` are presentation visuals, not application captures.
+Close an older running window first. Preserve your old local_state.json if you need its demo history; downloading a fresh folder otherwise starts a fresh demo.
+
+## Recommended screenshots
+
+1. **matching.png** — In **Find resources**, select **Demo Community School (School)**, enter `display for computer lab`, quantity `2`, radius `10`, and click **Find matches**. Capture the resource cards.
+2. **transfer.png** — Click **Review transfer** on a monitor card. Enter quantity `2`, a demo purchase benchmark of `6000`, transport `300`, and refurbishment `250`. Capture the form. Tick the inspection checkbox only as part of this fictional demo, then click **Confirm demo transfer**.
+3. **impact.png** — The app opens **Reuse impact** after confirmation. Capture the metric cards and recorded transfer.
+4. **partners.png** — Open **Partner network** to capture the fictional institutions and approval states.
+
+These are synthetic examples, not real donations. Keep the demo disclosure visible.
+
+On macOS, press **Shift + Command + 4** and select the application window area. Crop out unrelated personal information.
+
+## Add to GitHub
+
+Open this folder and use **Add file → Upload files**, then commit your PNG files. To display existing captures in the root README, add:
+
+```markdown
+![Resource matching](screenshots/matching.png)
+![Transfer review](screenshots/transfer.png)
+![Reuse impact](screenshots/impact.png)
+![Partner network](screenshots/partners.png)
+```
+
+Only add image links after their files exist. You can also send your screenshots in the chat to have them uploaded.
