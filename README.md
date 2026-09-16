@@ -24,38 +24,40 @@ This is an intended contribution to these goals, not proof of achieved impact. A
 - Approval checks and a school-sharing eligibility flag for each listing.
 - Human inspection confirmation before a transfer can be recorded.
 - Local stock updates, recipient records and reuse summaries.
-- Optional desktop interface and a command-line demo.
+- Responsive local browser interface, optional legacy desktop interface and a command-line demo.
 
 **13 listings · 9 supported item types · 10 passing core test methods.** These are functional tests on synthetic data, not a real-world AI accuracy score.
 
-## Run the project
+## Open the browser app (recommended)
 
 Requires Python 3.10 or newer. No pip packages or API key needed.
 
-Download and extract the repository ZIP. Open a terminal in its folder:
+Download a fresh copy using **Code → Download ZIP**, extract it, and open a terminal in that folder:
 
 ```bash
-python3 reloop.py school-demo
+python3 web_app.py
 ```
 
-This repeatable example finds monitors for a fictional school and records an in-memory transfer. It does not modify local state.
+The app opens in your browser at **http://127.0.0.1:8765**. If it does not open automatically, paste that address into your browser. Keep the terminal running; press **Ctrl+C** to stop. If the port is busy, use `python3 web_app.py --port 8766`.
 
-For the desktop interface:
+The browser version runs entirely on your computer. It uses the same local inventory, matching engine and `local_state.json` as the existing Python app. No account, cloud API, npm or pip installation is required. On Windows, use `py` if `python3` is unavailable.
+
+### Browser workspace
+
+- **Resource exchange:** search, quick category filters, recipient selection and ranked resource cards.
+- **Review transfer:** accessible dialog with the selected recipient, inspection confirmation and a live estimated-cost preview.
+- **Reuse impact:** metric cards, recorded transfers and explicit environmental limitations.
+- **Partner network:** fictional institutions, approval states and the SDG mapping.
+- Responsive desktop and phone layouts. All fonts and assets work without an internet connection.
+
+### Other ways to run
 
 ```bash
-python3 reloop.py gui
+python3 reloop.py school-demo  # Repeatable example; no state changes
+python3 reloop.py gui          # Previous Tkinter desktop interface
 ```
 
-Python must include Tk support and run on a graphical desktop. The core and CLI were tested; the desktop interface has not been visually validated in the build environment. On Windows, use `py` if `python3` is unavailable.
-
-## Desktop workspace
-
-- **Find resources:** recipient dropdown, search filters and ranked resource cards.
-- **Review transfer:** opens from a selected result and keeps its recipient fixed.
-- **Reuse impact:** readable metric cards, transfer confirmations and recent history.
-- **Partner network:** fictional institutions and their approval status.
-
-Download the latest repository ZIP to get this redesigned interface. Close the old application before opening the new copy. The matching engine and CLI remain compatible with the existing commands.
+The legacy desktop interface needs Tk support. Use the browser app for the new visual design and project screenshots.
 
 ## Search for a school
 
@@ -70,7 +72,7 @@ python3 reloop.py match "display for computer lab" --quantity 2 --max-distance 1
 | `SCHOOL01` | School | Approved fixture |
 | `SCHOOL02` | School | Awaiting review; blocked |
 
-Use `CAMPUS01` for internal reuse. The default recipient in CLI searches is `CAMPUS01`; the desktop field starts with `SCHOOL01`. Distances are supplied per-recipient demo values, not map calculations. Listed approval is a fixture, not independently verified identity or an agreement.
+Use `CAMPUS01` for internal reuse. The default recipient in CLI searches is `CAMPUS01`; the browser and desktop interfaces start with `SCHOOL01`. Distances are supplied per-recipient demo values, not map calculations. Listed approval is a fixture, not independently verified identity or an agreement.
 
 ## Record a demo school transfer
 
@@ -94,7 +96,7 @@ Savings use the entered new-purchase benchmark minus refurbishment and transport
 
 ## Screenshots
 
-Add actual application or terminal captures to the [screenshots folder](screenshots/). Follow the [capture and upload guide](screenshots/README.md). No application screenshots have been uploaded yet.
+Add actual application or terminal captures to the [screenshots folder](screenshots/). Follow the [capture and upload guide](screenshots/README.md). Application screenshots have not been added yet. Browser rendering could not be visually verified in the build environment because access to the local app was blocked. HTTP integration checks passed for assets, matching, rejected input, school transfers and persisted impact totals.
 
 ## Why AI is useful
 
@@ -124,7 +126,9 @@ A production network needs institutional authentication, role-based permissions,
 python3 -m unittest test_reloop.py
 ```
 
-- `reloop.py`: matching, transfers, desktop interface and CLI.
+- `web_app.py`: loopback-only Python HTTP server for the browser app.
+- `web/`: HTML, CSS and JavaScript frontend.
+- `reloop.py`: matching, transfers, legacy desktop interface and CLI.
 - `inventory.json`: synthetic reusable stock and sharing constraints.
 - `partners.json`: synthetic recipient registry.
 - `school_demo_output.json`: actual school demo output.
