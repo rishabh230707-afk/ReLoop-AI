@@ -3,7 +3,7 @@
 
 ReLoop connects usable surplus campus equipment and furniture with departments and partner schools that need them. It checks existing resources before new purchases, with the goal of preventing waste and improving access to educational equipment.
 
-**Author:** Rishabh Bansal  
+**Author:** Rishabh Bansal, MAIT Delhi
 **Programme:** 1M1B AI for Sustainability Virtual Internship
 
 ## SDG alignment
@@ -16,8 +16,22 @@ ReLoop connects usable surplus campus equipment and furniture with departments a
 
 This is an intended contribution to these goals, not proof of achieved impact. All inventory, schools, approvals, distances, costs and transfers in the demo are **synthetic**. There are no real institutional partnerships yet.
 
+## RAG and agentic AI upgrade
+
+The **Reuse assistant** adds document-grounded answers and a bounded tool-calling planner through a local Ollama model. Read the [setup guide](docs/AI_SETUP.md).
+
+```bash
+ollama pull qwen3:4b
+python3 web_app.py --ai-mode ollama --model qwen3:4b
+```
+
+Install and start Ollama first. The default `python3 web_app.py` still works without model setup, but assistant answers are explicitly labelled retrieved excerpts and the planner is a scripted preview. Actual RAG generation and model-selected tools require `--ai-mode ollama`. There is no silent fallback.
+
 ## What works now
 
+- Document chunking, TF-IDF retrieval, generated cited answers and abstention in Ollama mode.
+- Bounded model-selected inventory, guidance and estimate tools, with a visible activity trace.
+- A human review handoff that never automatically records a transfer.
 - Classic NLP matching using a small synonym glossary, TF-IDF vectors and cosine similarity.
 - Stock, distance and repair filters with explanations and partial-quantity disclosure.
 - Campus and school recipients from a demo partner registry.
@@ -26,11 +40,11 @@ This is an intended contribution to these goals, not proof of achieved impact. A
 - Local stock updates, recipient records and reuse summaries.
 - Responsive local browser interface, optional legacy desktop interface and a command-line demo.
 
-**13 listings · 9 supported item types · 10 passing core test methods.** These are functional tests on synthetic data, not a real-world AI accuracy score.
+**13 listings · 9 supported item types · 31 passing test methods (core, assistant and HTTP).** These are functional tests on synthetic data, not a real-world AI accuracy score.
 
 ## Open the browser app (recommended)
 
-Requires Python 3.10 or newer. No pip packages or API key needed.
+Requires Python 3.10 or newer. No pip packages or API key needed. Full AI mode additionally requires Ollama and a downloaded model.
 
 Download a fresh copy using **Code → Download ZIP**, extract it, and open a terminal in that folder:
 
@@ -44,6 +58,7 @@ The browser version runs entirely on your computer. It uses the same local inven
 
 ### Browser workspace
 
+- **Reuse assistant:** cited guidance and reuse planning, with clear model/preview labels.
 - **Resource exchange:** search, quick category filters, recipient selection and ranked resource cards.
 - **Review transfer:** accessible dialog with the selected recipient, inspection confirmation and a live estimated-cost preview.
 - **Reuse impact:** metric cards, recorded transfers and explicit environmental limitations.
@@ -96,13 +111,13 @@ Savings use the entered new-purchase benchmark minus refurbishment and transport
 
 ## Screenshots
 
-Add actual application or terminal captures to the [screenshots folder](screenshots/). Follow the [capture and upload guide](screenshots/README.md). Application screenshots have not been added yet. Browser rendering could not be visually verified in the build environment because access to the local app was blocked. HTTP integration checks passed for assets, matching, rejected input, school transfers and persisted impact totals.
+The revised [PowerPoint](docs/ReLoop_AI.pptx) and [PDF](docs/ReLoop_AI.pdf) include the supplied resource exchange, impact and partner screenshots. These show the original resource workflow; the new assistant is described with architecture diagrams. See the [setup guide](docs/AI_SETUP.md) to run it. Automated HTTP checks passed; live model inference and browser visual checks remain to be performed on the target computer.
 
 ## Why AI is useful
 
 Descriptions differ: a request for a “display” can match a “monitor.” The NLP baseline normalizes supported words and ranks descriptions. Filters enforce eligibility, distance, stock and repair preferences. Staff must still check size, connectors, condition, electrical safety and suitability for learners.
 
-This version uses classic information retrieval, not an LLM, image recognition, neural classifier or IBM Granite. Similarity is a ranking value, not calibrated confidence. Unknown words or complex descriptions may need clarification.
+Inventory search uses classic NLP. The assistant adds RAG and model-selected tools in Ollama mode. It does not use IBM Granite or IBM BOB. Similarity is a ranking value, not calibrated confidence. Models can misinterpret evidence, and complex requests may need clarification. See [AI architecture and validation](docs/AI_SETUP.md).
 
 ## Responsible AI
 
@@ -123,9 +138,13 @@ A production network needs institutional authentication, role-based permissions,
 ## Tests and source
 
 ```bash
-python3 -m unittest test_reloop.py
+python3 -m unittest test_reloop.py test_ai_assistant.py test_web_ai.py
 ```
 
+- `ai_assistant.py`: RAG retrieval/generation, Ollama adapter and bounded agent controller.
+- `knowledge/`: project-authored prototype guidance, not official institutional policy.
+- `test_ai_assistant.py` and `test_web_ai.py`: assistant contract and HTTP tests.
+- `agent_demo_output.json` and `rag_preview_output.json`: no-model preview outputs.
 - `web_app.py`: loopback-only Python HTTP server for the browser app.
 - `web/`: HTML, CSS and JavaScript frontend.
 - `reloop.py`: matching, transfers, legacy desktop interface and CLI.
@@ -140,4 +159,4 @@ python3 -m unittest test_reloop.py
 
 [UN Goal 4](https://sdgs.un.org/goals/goal4) · [UN Goal 12](https://sdgs.un.org/goals/goal12) · [UN Goal 17](https://sdgs.un.org/goals/goal17)
 
-The project also follows the internship guidelines supplied by the student. Presentation and submission documents will be revised to match this expanded scope after the GitHub setup.
+The project also follows the internship guidelines supplied by the student. The presentation and PDF explain the AI integration and distinguish tested previews from live-model validation. Model-path tests use scripted responses. Live Ollama inference still needs checking on the user’s computer.

@@ -1,0 +1,232 @@
+{
+  "mode": "workflow_preview",
+  "status": "awaiting_human_inspection",
+  "proposal": {
+    "item_id": "RL01",
+    "title": "22 inch LED monitors",
+    "recipient": "SCHOOL01",
+    "quantity": 2,
+    "remaining_need": 0,
+    "distance_km": 3.4,
+    "estimated_mass_reused_kg": 6.4,
+    "estimated_net_savings_inr": 0,
+    "price": 0,
+    "transport": 0,
+    "refurbishment": 0,
+    "state": "awaiting_human_inspection",
+    "transfer_recorded": false
+  },
+  "matches": [
+    {
+      "id": "RL01",
+      "title": "22 inch LED monitors",
+      "description": "Computer lab monitor HDMI display 1080p tested functional",
+      "category": "Electronics",
+      "department": "Computing Block A",
+      "condition": "working",
+      "quantity": 8,
+      "distance_km": 3.4,
+      "mass_kg": 3.2,
+      "school_shareable": true,
+      "recipient_distances": {
+        "CAMPUS01": 0.4,
+        "SCHOOL01": 3.4
+      },
+      "offered_quantity": 2,
+      "remaining_need": 0,
+      "similarity": 0.6118,
+      "matched_terms": [
+        "computer",
+        "lab",
+        "monitor"
+      ],
+      "explanation": "Shared terms: computer, lab, monitor. Verify all specifications with the owner before transfer."
+    },
+    {
+      "id": "RL02",
+      "title": "24 inch monitors",
+      "description": "Office monitor HDMI display 1080p tested functional",
+      "category": "Electronics",
+      "department": "Admin Block",
+      "condition": "working",
+      "quantity": 3,
+      "distance_km": 3.8,
+      "mass_kg": 3.8,
+      "school_shareable": true,
+      "recipient_distances": {
+        "CAMPUS01": 0.8,
+        "SCHOOL01": 3.8
+      },
+      "offered_quantity": 2,
+      "remaining_need": 0,
+      "similarity": 0.3461,
+      "matched_terms": [
+        "monitor"
+      ],
+      "explanation": "Shared terms: monitor. Verify all specifications with the owner before transfer."
+    }
+  ],
+  "sources": [
+    {
+      "id": "impact_methods-1",
+      "file": "knowledge/impact_methods.md",
+      "title": "ReLoop demo impact methodology",
+      "section": "Reused mass",
+      "text": "Estimated reused mass equals the transferred quantity multiplied by each item's sample unit mass. This estimates material kept in use. It does not establish landfill diversion or carbon emissions avoided. All demo weights are synthetic.",
+      "score": 0.3199
+    },
+    {
+      "id": "responsible_ai-4",
+      "file": "knowledge/responsible_ai.md",
+      "title": "ReLoop responsible AI guidance",
+      "section": "Human control",
+      "text": "The agent may search inventory, retrieve guidance and estimate a reuse proposal. It has no transfer, purchase, email, shell or file-writing tool. Human inspection and an explicit confirmation in the normal transfer form are required to change stock.",
+      "score": 0.2425
+    },
+    {
+      "id": "reuse_rules-3",
+      "file": "knowledge/reuse_rules.md",
+      "title": "ReLoop demo reuse rules",
+      "section": "Inspection and transfer",
+      "text": "A human must inspect condition, specifications and ownership permission before a transfer. For a monitor, check connectors, power supply and electrical safety with qualified staff. The assistant cannot certify safety or approve a transfer. A user records an inspected demo transfer through the existing review form.",
+      "score": 0.2271
+    },
+    {
+      "id": "reuse_rules-1",
+      "file": "knowledge/reuse_rules.md",
+      "title": "ReLoop demo reuse rules",
+      "section": "Partner approval",
+      "text": "Only approved demo partners can receive resources. CAMPUS01 is the approved campus and SCHOOL01 is the approved school. SCHOOL02 is awaiting review and cannot receive transfers. These are fictional approval fixtures, not verified institutional agreements.",
+      "score": 0.1521
+    }
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "tool": "search_inventory",
+      "arguments": {},
+      "observation": {
+        "status": "matched",
+        "message": "Candidate matches; similarity is not a probability or a suitability guarantee.",
+        "matches": [
+          {
+            "id": "RL01",
+            "title": "22 inch LED monitors",
+            "description": "Computer lab monitor HDMI display 1080p tested functional",
+            "category": "Electronics",
+            "department": "Computing Block A",
+            "condition": "working",
+            "quantity": 8,
+            "distance_km": 3.4,
+            "mass_kg": 3.2,
+            "school_shareable": true,
+            "recipient_distances": {
+              "CAMPUS01": 0.4,
+              "SCHOOL01": 3.4
+            },
+            "offered_quantity": 2,
+            "remaining_need": 0,
+            "similarity": 0.6118,
+            "matched_terms": [
+              "computer",
+              "lab",
+              "monitor"
+            ],
+            "explanation": "Shared terms: computer, lab, monitor. Verify all specifications with the owner before transfer."
+          },
+          {
+            "id": "RL02",
+            "title": "24 inch monitors",
+            "description": "Office monitor HDMI display 1080p tested functional",
+            "category": "Electronics",
+            "department": "Admin Block",
+            "condition": "working",
+            "quantity": 3,
+            "distance_km": 3.8,
+            "mass_kg": 3.8,
+            "school_shareable": true,
+            "recipient_distances": {
+              "CAMPUS01": 0.8,
+              "SCHOOL01": 3.8
+            },
+            "offered_quantity": 2,
+            "remaining_need": 0,
+            "similarity": 0.3461,
+            "matched_terms": [
+              "monitor"
+            ],
+            "explanation": "Shared terms: monitor. Verify all specifications with the owner before transfer."
+          }
+        ]
+      }
+    },
+    {
+      "step": 2,
+      "tool": "retrieve_guidance",
+      "arguments": {
+        "question": "human inspection school transfer approval and estimated reused mass"
+      },
+      "observation": {
+        "sources": [
+          {
+            "id": "impact_methods-1",
+            "file": "knowledge/impact_methods.md",
+            "title": "ReLoop demo impact methodology",
+            "section": "Reused mass",
+            "text": "Estimated reused mass equals the transferred quantity multiplied by each item's sample unit mass. This estimates material kept in use. It does not establish landfill diversion or carbon emissions avoided. All demo weights are synthetic.",
+            "score": 0.3199
+          },
+          {
+            "id": "responsible_ai-4",
+            "file": "knowledge/responsible_ai.md",
+            "title": "ReLoop responsible AI guidance",
+            "section": "Human control",
+            "text": "The agent may search inventory, retrieve guidance and estimate a reuse proposal. It has no transfer, purchase, email, shell or file-writing tool. Human inspection and an explicit confirmation in the normal transfer form are required to change stock.",
+            "score": 0.2425
+          },
+          {
+            "id": "reuse_rules-3",
+            "file": "knowledge/reuse_rules.md",
+            "title": "ReLoop demo reuse rules",
+            "section": "Inspection and transfer",
+            "text": "A human must inspect condition, specifications and ownership permission before a transfer. For a monitor, check connectors, power supply and electrical safety with qualified staff. The assistant cannot certify safety or approve a transfer. A user records an inspected demo transfer through the existing review form.",
+            "score": 0.2271
+          },
+          {
+            "id": "reuse_rules-1",
+            "file": "knowledge/reuse_rules.md",
+            "title": "ReLoop demo reuse rules",
+            "section": "Partner approval",
+            "text": "Only approved demo partners can receive resources. CAMPUS01 is the approved campus and SCHOOL01 is the approved school. SCHOOL02 is awaiting review and cannot receive transfers. These are fictional approval fixtures, not verified institutional agreements.",
+            "score": 0.1521
+          }
+        ]
+      }
+    },
+    {
+      "step": 3,
+      "tool": "estimate_reuse",
+      "arguments": {
+        "item_id": "RL01"
+      },
+      "observation": {
+        "item_id": "RL01",
+        "title": "22 inch LED monitors",
+        "recipient": "SCHOOL01",
+        "quantity": 2,
+        "remaining_need": 0,
+        "distance_km": 3.4,
+        "estimated_mass_reused_kg": 6.4,
+        "estimated_net_savings_inr": 0,
+        "price": 0,
+        "transport": 0,
+        "refurbishment": 0,
+        "state": "awaiting_human_inspection",
+        "transfer_recorded": false
+      }
+    }
+  ],
+  "message": "Proposal only. Inspect the item, then use Review transfer to confirm.",
+  "notice": "Scripted workflow preview. No agent model was called.",
+  "transfer_recorded": false
+}

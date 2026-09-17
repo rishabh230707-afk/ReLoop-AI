@@ -1,3 +1,7 @@
+# AI upgrade notice
+
+The assistant now implements RAG and bounded tool calling through Ollama. See [AI_SETUP.md](AI_SETUP.md) for current setup and validation status. The original project scope below describes the inventory baseline. Any earlier statement that no LLM is implemented refers to that baseline only.
+
 # ReLoop AI: expanded project scope
 
 ## Problem statement

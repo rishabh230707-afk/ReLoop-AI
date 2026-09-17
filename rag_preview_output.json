@@ -1,0 +1,24 @@
+{
+  "mode": "retrieval_preview",
+  "sources": [
+    {
+      "id": "reuse_rules-3",
+      "file": "knowledge/reuse_rules.md",
+      "title": "ReLoop demo reuse rules",
+      "section": "Inspection and transfer",
+      "text": "A human must inspect condition, specifications and ownership permission before a transfer. For a monitor, check connectors, power supply and electrical safety with qualified staff. The assistant cannot certify safety or approve a transfer. A user records an inspected demo transfer through the existing review form.",
+      "score": 0.3844
+    },
+    {
+      "id": "responsible_ai-4",
+      "file": "knowledge/responsible_ai.md",
+      "title": "ReLoop responsible AI guidance",
+      "section": "Human control",
+      "text": "The agent may search inventory, retrieve guidance and estimate a reuse proposal. It has no transfer, purchase, email, shell or file-writing tool. Human inspection and an explicit confirmation in the normal transfer form are required to change stock.",
+      "score": 0.1925
+    }
+  ],
+  "notice": "Extractive preview: these are retrieved excerpts. No generative model was called.",
+  "status": "preview",
+  "answer": "[reuse_rules-3] A human must inspect condition, specifications and ownership permission before a transfer. For a monitor, check connectors, power supply and electrical safety with qualified staff. The assistant cannot certify safety or approve a transfer. A user records an inspected demo transfer through the existing review form.\n\n[responsible_ai-4] The agent may search inventory, retrieve guidance and estimate a reuse proposal. It has no transfer, purchase, email, shell or file-writing tool. Human inspection and an explicit confirmation in the normal transfer form are required to change stock."
+}
